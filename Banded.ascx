@@ -13,7 +13,6 @@
 <%@ Register TagPrefix="dnn" TagName="MENU" src="~/DesktopModules/DDRMenu/Menu.ascx" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.Client.ClientResourceManagement" Assembly="DotNetNuke.Web.Client" %>
 
-
 <%-- Foundation Resources --%>
 <dnn:DnnJsInclude ID="modernizr" runat="server" FilePath="foundation/js/modernizr.js" PathNameAlias="SkinPath" />
 <link rel="stylesheet" href="/Portals/_default/Skins/Foundation/foundation/css/foundation.min.css" media="screen" type="text/css" />
@@ -24,21 +23,52 @@
 <dnn:META ID="mobileScale" runat="server" Name="viewport" Content="width=device-width,initial-scale=1" />
 <dnn:LANGUAGE runat="server" id="LANGUAGE1"  showMenu="False" showLinks="True" />
 
-<div class="row">
-  <div class="large-8 columns">
-  	 <dnn:LOGO runat="server" id="dnnLOGOmobi" />
-  </div>
-  <div class="large-4 columns">
-  	<div class="foundation-search">
-	  	<dnn:SEARCH ID="dnnSearch" runat="server" ShowSite="false" ShowWeb="false" EnableTheming="true" Submit="Search" CssClass="search-button fi-magnifying-glass" />
-  	</div>
-  </div>
-  
-</div>
+<%-- Start Header --%>
+<header>
+	
+	<%-- Start Header Content --%>
+	<div class="row">
+	  <div class="large-8 medium-7 columns">
+	     <div id="DNNlogo">
+	  	   <dnn:LOGO runat="server" id="dnnLOGOmobi" />
+	  	 </div>
+	  </div>
+	  <div class="large-4 medium-5 columns">
+	  	<div class="foundation-search">
+		  	<dnn:SEARCH ID="dnnSearch" runat="server" ShowSite="false" ShowWeb="false" EnableTheming="true" Submit="Search" CssClass="search-button fi-search" />
+	  	</div>
+	  </div>
+	</div>
+	<%-- End Header Content --%>
+	
+	<br/>
+	
+	<%-- Start Header Navigation --%>
+	<div class="row">
+	  <div class="large-12 columns">
+	    <nav class="top-bar" data-topbar>
+	      <ul class="title-area">
+	        <li class="name">
+	          <h1><a href="#"><%=PortalSettings.PortalName%></a></h1>
+	        </li>
+	        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+	      </ul>
+	      <dnn:MENU ID="foundationNav" MenuStyle="foundationNav" runat="server"></dnn:MENU>
+	    </nav>
+	  </div>
+	</div>
+	<%-- End Header Navigation --%>
+
+</header>
+<%-- End Header --%>
 
 <div class="row">
   <div class="large-12 columns">
-    <dnn:MENU ID="foundationNav" MenuStyle="foundationNav" runat="server"></dnn:MENU>
+    <ul class="breadcrumbs">
+      <li>
+	    <dnn:BREADCRUMB ID="dnnBreadcrumb" runat="server" LegacyMode="false" RootLevel="0" Separator="&lt;/li&gt;&lt;li&gt;"/>
+	  </li>
+	</ul>
   </div>
 </div>
 
@@ -47,8 +77,11 @@
     <div id="ContentPane" class="contentPane" runat="server"></div>
   </div>
   <div class="large-4 columns">
-    <dnn:LOGIN ID="dnnLogin" CssClass="LoginLink" runat="server" LegacyMode="false" />
-    <dnn:USER ID="dnnUser" runat="server" LegacyMode="false" /> 
+    <div class="panel">
+      <dnn:LOGIN ID="dnnLogin" CssClass="LoginLink" runat="server" LegacyMode="false" />
+      <dnn:USER ID="dnnUser" runat="server" LegacyMode="false" /> 
+    </div>
+    <div id="RightSidebar" class="Right-Sidebar" runat="server"></div>
   </div>
 </div>
 
@@ -58,14 +91,15 @@
   <div class="large-12 columns">
     <hr />
     <div class="row">
-      <div class="large-6 columns">
+      <div class="large-6 medium-6 columns">
         <dnn:COPYRIGHT ID="dnnCopyright" runat="server" CssClass="pull-left" />
       </div>
-      <div class="large-6 columns">
-      	 <ul class="inline-list right">
-          <li><dnn:TERMS ID="dnnTerms" runat="server" /></li>
-          <li><dnn:PRIVACY ID="dnnPrivacy" runat="server" /></li>
-        </ul>
+      <div class="large-6 medium-6 columns">
+      	<div class="right">
+          <dnn:TERMS ID="dnnTerms" runat="server" /> | 
+          <dnn:PRIVACY ID="dnnPrivacy" runat="server" />
+          
+        </div>
       </div>
     </div>
   </div>
@@ -95,6 +129,7 @@
 <script src="/Portals/_default/Skins/Foundation/foundation/js/jquery.js"></script>
 <script src="/Portals/_default/Skins/Foundation/foundation/js/foundation.min.js"></script>
 <script>
-  $(document).foundation();
+	jQuery.noConflict();
+	jQuery(document).foundation();
 </script>
 <%-- Foundation Resources --%>

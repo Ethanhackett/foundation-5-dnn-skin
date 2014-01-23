@@ -3,35 +3,156 @@
 
 @charset "UTF-8";
 
-/* @group Search Box */
-	.foundation-search {
-		margin-top: 10px;
+/* @group Header */
+	header {
+		margin-top: 15px;
+		margin-bottom: 15px;
 	}
-	.foundation-search .searchInputContainer{
-		display: block !important;
-		width: 100%;
-		float: left;
-		margin-right: -42px !important;
-		position: relative;
+	#DNNlogo a {
+		display: inline-block;
 	}
-	/* Search Box */
-	.foundation-search #dnn_dnnSearch_txtSearch {
-		margin-bottom: 0;
-		width: 100%;
-	}
-	/* Search Button */
-	.foundation-search #dnn_dnnSearch_cmdSearch {
-		display: block;
-		width: 42px;
-		height: 42px;
-		float: right;
-		position: relative;
-	}
-
+	/* @group Search Box */
+		.foundation-search {
+			margin-top: 15px;
+		}
+		.foundation-search .searchInputContainer{
+			display: block !important;
+			width: 100%;
+			float: left;
+			margin-right: -92px !important;
+			position: relative;
+			z-index: 2;
+		}
+		/* Search Box */
+		.foundation-search #dnn_dnnSearch_txtSearch {
+			margin-bottom: 0;
+			width: 100%;
+			padding-right: 66px;
+		}
+		/* Search Button */
+		.foundation-search #dnn_dnnSearch_cmdSearch {
+			display: block;
+			width: 38px;
+			height: 37px;
+			float: right;
+			position: relative;
+			z-index: 3;
+			color: #ffffff;
+			background-color: #188cb9;
+			font-size: 17px;
+			line-height: 37px;
+			text-align: center;
+			overflow: hidden;
+		}
+		.fi-search:before { content: "\f16c"; }
+		.fi-search:before {
+			font: 21px "foundation-icons";
+			font-style: normal;
+		  font-weight: normal;
+		  font-variant: normal;
+		  text-transform: none;
+		  line-height: 38px;
+		  -webkit-font-smoothing: antialiased;
+		  display: block;
+		  text-decoration: inherit;
+		}
+		/* Search Clear Button */
+		.foundation-search a.dnnSearchBoxClearText.dnnShow {
+			margin-top: -26px;
+			margin-bottom: 0;
+			margin-right: 36px;
+		}
+		/* Search Results */
+		.foundation-search ul.searchSkinObjectPreview {
+			border-top-style: none;
+			-moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.29);
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.29);
+			border-style: none;
+			width: 100%;
+			z-index: 1;
+		}
+		.foundation-search li.searchSkinObjectPreview_group {
+			border-top-style: none;
+			background-color: #188cb8 !important;
+			color: #ffffff !important;
+			font-family:"Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+			font-weight:300 !important;
+			font-style:normal !important;
+			text-rendering:optimizeLegibility;
+			line-height:1.4;
+			border-bottom: none !important;
+		}	
+	/* @end */
 /* @end */
+
+
+footer * {
+	font-size: 12px;
+	color: #8a8a8a;
+}
+
+
+/* Small screens*/
+/* Define mobile styles */
+@media only screen { } 
+
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media only screen and (max-width: 40em) { 
+	.foundation-search ul.searchSkinObjectPreview {
+		width: 100%;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		border-style: solid;
+		border-width: 1px;
+		border-top-style: none;
+	}
+	footer {
+		text-align: center;
+	}
+	footer .right {
+		text-align: center;
+		width: 100%;
+		padding-top: 10px;
+	}
+}
+
+/* Medium screens*/
+/* min-width 641px, medium screens */
+@media only screen and (min-width: 40.063em) {}
+
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { }
+
+/* Large screens*/
+/* min-width 1025px, large screens */
+@media only screen and (min-width: 64.063em) { }
+
+/* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { }
+
+/* XLarge screens*/
+/* min-width 1441px, xlarge screens */
+@media only screen and (min-width: 90.063em) { }
+
+/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { }
+
+/* XXLarge screens*/
+/* min-width 1921px, xlarge screens */
+@media only screen and (min-width: 120.063em) { }
+
+
+
 
 /* @group DNN Admin CSS */
 	/* Adds the padding to the top */
+
+	/* Fixes the DNN modal close button */
+	#Body .ui-button.ui-widget.ui-dialog-titlebar-close {
+		width: 27px !important;
+		padding: 0;
+	}
+	
 	body.Admin #ns-tool-bar, body.Admin #left-content, body.Admin #right-sidebar {
 		top: 35px !important;
 	}

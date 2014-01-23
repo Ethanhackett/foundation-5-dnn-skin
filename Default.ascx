@@ -24,21 +24,88 @@
 <dnn:META ID="mobileScale" runat="server" Name="viewport" Content="width=device-width,initial-scale=1" />
 <dnn:LANGUAGE runat="server" id="LANGUAGE1"  showMenu="False" showLinks="True" />
 
+<%-- Start Header --%>
+<header>
+	
+	<%-- Start Header Content --%>
+	<div class="row">
+	  <div class="large-8 medium-7 columns">
+	     <div id="DNNlogo">
+	  	   <dnn:LOGO runat="server" id="dnnLOGOmobi" />
+	  	 </div>
+	  </div>
+	  <div class="large-4 medium-5 columns">
+	  	<div class="foundation-search">
+		  	<dnn:SEARCH ID="dnnSearch" runat="server" ShowSite="false" ShowWeb="false" EnableTheming="true" Submit="Search" CssClass="search-button fi-search" />
+	  	</div>
+	  </div>
+	</div>
+	<%-- End Header Content --%>
+	
+	<br/>
+	
+	<%-- Start Header Navigation --%>
+	<div class="row">
+	  <div class="large-12 columns">
+	    <nav class="top-bar" data-topbar>
+	      <ul class="title-area">
+	        <li class="name">
+	          <h1><a href="#"><%=PortalSettings.PortalName%></a></h1>
+	        </li>
+	        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+	      </ul>
+	      <dnn:MENU ID="foundationNav" MenuStyle="foundationNav" runat="server"></dnn:MENU>
+	    </nav>
+	  </div>
+	</div>
+	<%-- End Header Navigation --%>
 
+</header>
+<%-- End Header --%>
 
 <div class="row">
   <div class="large-12 columns">
-    <dnn:SEARCH ID="dnnSearch" runat="server" ShowSite="false" ShowWeb="false" EnableTheming="true" Submit="Search" CssClass="SearchButton" />
-    
-    <dnn:LOGIN ID="dnnLogin" CssClass="LoginLink" runat="server" LegacyMode="false" />
-    <dnn:USER ID="dnnUser" runat="server" LegacyMode="false" /> 
-    <dnn:LOGO runat="server" id="dnnLOGOmobi" />
+    <ul class="breadcrumbs">
+      <li>
+	    <dnn:BREADCRUMB ID="dnnBreadcrumb" runat="server" LegacyMode="false" RootLevel="0" Separator="&lt;/li&gt;&lt;li&gt;"/>
+	  </li>
+	</ul>
   </div>
 </div>
 
 <div class="row">
+  <div class="large-8 columns">
+    <div id="ContentPane" class="contentPane" runat="server"></div>
+  </div>
+  <div class="large-4 columns">
+    <dnn:LOGIN ID="dnnLogin" CssClass="LoginLink" runat="server" LegacyMode="false" />
+    <dnn:USER ID="dnnUser" runat="server" LegacyMode="false" /> 
+  </div>
+</div>
+
+
+
+<footer class="row">
   <div class="large-12 columns">
-    <div id="ContentPane" class="span12 contentPane" runat="server"></div>
+    <hr />
+    <div class="row">
+      <div class="large-6 medium-6 columns">
+        <dnn:COPYRIGHT ID="dnnCopyright" runat="server" CssClass="pull-left" />
+      </div>
+      <div class="large-6 medium-6 columns">
+      	<div class="right">
+          <dnn:TERMS ID="dnnTerms" runat="server" /> | 
+          <dnn:PRIVACY ID="dnnPrivacy" runat="server" />
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<%--<div class="row">
+  <div class="large-12 columns">
 
     <div id="leftPane" class="span8 leftPane spacingTop" runat="server"></div>
     <div id="sidebarPane" class="span4 sidebarPane spacingTop" runat="server"></div>
@@ -51,13 +118,8 @@
     <div id="footerRightPane" class="span2 footerPane" runat="server"></div>
     <div id="footerRightOuterPane" class="span2 offset2 footerPaneRight" runat="server"></div>
     
-    <dnn:LINKTOMOBILE ID="dnnLinkToMobile" runat="server" />
-    <dnn:TERMS ID="dnnTerms" runat="server" /> |
-    <dnn:PRIVACY ID="dnnPrivacy" runat="server" />
-
-    <dnn:COPYRIGHT ID="dnnCopyright" runat="server" CssClass="pull-left" />
   </div>
-</div>
+</div>--%>
 
 
 <%-- Foundation Resources --%>
