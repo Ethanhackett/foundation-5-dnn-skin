@@ -1,0 +1,50 @@
+﻿@charset "UTF-8";
+
+/* @group DNN Admin CSS */
+
+	/* Adds the padding to the top */
+	body.Admin #ns-tool-bar, body.Admin #left-content, body.Admin #right-sidebar {
+		top: 35px !important;
+	}
+	.megaborder{
+	    -webkit-box-sizing: padding-box !important; 
+	    -moz-box-sizing: padding-box !important; 
+	    box-sizing: padding-box !important; 
+	}
+	#dnnCPWrap * {
+		-webkit-box-sizing: content-box !important; 
+		-moz-box-sizing: content-box !important; 
+		box-sizing: content-box !important;
+	}
+	#dnnCPWrap input[type="text"] { 
+		margin: 0; 
+		padding: 8px; 
+		height: auto; 
+	}
+	#dnnCPWrap table {
+		margin-bottom: 0;
+	}
+	div.jspPane {
+		width: 100% !important; 
+	}
+	ul.rcbList {
+		background-color: #ffffff;
+		border: 1px solid #c9c9c9;
+	}
+	ul.rcbList li {
+		font-size: 12px;
+		padding: 4px;
+		border-bottom: 1px solid #edeeed;
+	}
+	ul.rcbList li:hover {
+		background-color: #f5f5f5;
+	}
+	ul.rcbList li img {
+		width: 18px;
+		margin-right: 5px;
+	}
+	.rcbWidth {
+		max-height: 200px;
+		overflow-y: scroll;
+	}
+/* @end */
