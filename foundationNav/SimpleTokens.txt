@@ -1,15 +1,26 @@
-<ul class="nav nav-pills">
-[*>NODE]
-</ul>
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">My Site</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="left">
+      [*>NODE]
+    </ul>
+  </section>
+</nav>
 [>NODE]
-	<li class="[?NODE]dropdown [/?][?SELECTED]active[/?]">
+	<li class="[?NODE]has-dropdown [/?][?SELECTED]active[/?]">
 	[?ENABLED]
 		<a target="[=TARGET]" href="[=URL]" [?NODE] [/?]>[=TEXT] [?NODE]<b class="caret hidden-desktop pull-right icon-chevron-down icon-white"></b>[/?]</a>
 	[?ELSE]
 		<a href="#" [?NODE] [/?]>[=TEXT] [?NODE]<b class="caret hidden-desktop pull-right icon-chevron-down icon-white"></b>[/?]</a>
 	[/?]
 	[?NODE]
-	    <ul class="dropdown-menu">
+	    <ul class="dropdown">
 	    [*>NODE]
 	    </ul>
 	[/?]

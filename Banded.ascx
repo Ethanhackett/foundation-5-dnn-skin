@@ -25,18 +25,19 @@
 <dnn:LANGUAGE runat="server" id="LANGUAGE1"  showMenu="False" showLinks="True" />
 
 <div class="row">
-  <div class="large-6 columns">
+  <div class="large-8 columns">
   	 <dnn:LOGO runat="server" id="dnnLOGOmobi" />
   </div>
-  
-  <div class="large-6 columns">
-  	<dnn:SEARCH ID="dnnSearch" runat="server" ShowSite="false" ShowWeb="false" EnableTheming="true" Submit="Search" CssClass="SearchButton" />
+  <div class="large-4 columns">
+  	<div class="foundation-search">
+	  	<dnn:SEARCH ID="dnnSearch" runat="server" ShowSite="false" ShowWeb="false" EnableTheming="true" Submit="Search" CssClass="search-button fi-magnifying-glass" />
+  	</div>
   </div>
   
 </div>
 
 <div class="row">
-  <div class="large-6 columns">
+  <div class="large-12 columns">
     <dnn:MENU ID="foundationNav" MenuStyle="foundationNav" runat="server"></dnn:MENU>
   </div>
 </div>

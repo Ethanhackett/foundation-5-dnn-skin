@@ -1,7 +1,36 @@
-﻿@charset "UTF-8";
+﻿/* @override 
+	http://nextstepacademydev.com.v3.cloudsites.gearhost.com/portals/_default/skins/foundation/skin.css?cdv=23 */
+
+@charset "UTF-8";
+
+/* @group Search Box */
+	.foundation-search {
+		margin-top: 10px;
+	}
+	.foundation-search .searchInputContainer{
+		display: block !important;
+		width: 100%;
+		float: left;
+		margin-right: -42px !important;
+		position: relative;
+	}
+	/* Search Box */
+	.foundation-search #dnn_dnnSearch_txtSearch {
+		margin-bottom: 0;
+		width: 100%;
+	}
+	/* Search Button */
+	.foundation-search #dnn_dnnSearch_cmdSearch {
+		display: block;
+		width: 42px;
+		height: 42px;
+		float: right;
+		position: relative;
+	}
+
+/* @end */
 
 /* @group DNN Admin CSS */
-
 	/* Adds the padding to the top */
 	body.Admin #ns-tool-bar, body.Admin #left-content, body.Admin #right-sidebar {
 		top: 35px !important;
