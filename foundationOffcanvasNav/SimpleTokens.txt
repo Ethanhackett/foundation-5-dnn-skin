@@ -1,0 +1,17 @@
+<ul class="off-canvas-list">
+  [*>NODE]
+</ul>
+[>NODE]
+	<li class="[?NODE]has-dropdown [/?][?SELECTED]active[/?]">
+	[?ENABLED]
+		<a target="[=TARGET]" href="[=URL]" [?NODE] [/?]>[=TEXT] [?NODE][/?]</a>
+	[?ELSE]
+		<a href="#" [?NODE] [/?]>[=TEXT] [?NODE][/?]</a>
+	[/?]
+	[?NODE]
+	    <ul class="offcanvas-dropdown">
+	    [*>NODE]
+	    </ul>
+	[/?]
+	</li>
+[/>]

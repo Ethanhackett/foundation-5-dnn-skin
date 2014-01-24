@@ -91,6 +91,25 @@ footer * {
 	color: #8a8a8a;
 }
 
+/* @group Off Canvas Navigation */
+	.offcanvas-dropdown {
+		margin-left: 0;
+	}
+	.offcanvas-dropdown {
+		text-indent: 15px;
+		font-size: 14px;
+	}
+	.offcanvas-dropdown .offcanvas-dropdown {
+		text-indent: 30px;
+	}
+	.off-canvas-list li.active {
+		background-color: #222222;
+	}
+	.off-canvas-list li.active li {
+		background-color: #323332;
+	}
+/* @end */
+
 
 /* Small screens*/
 /* Define mobile styles */
@@ -145,8 +164,96 @@ footer * {
 
 
 /* @group DNN Admin CSS */
-	/* Adds the padding to the top */
 
+	/* @group DNN Panel Styling */
+		form .dnn_mact li {
+			top: -51px;
+			right: -15px;
+		}
+		.eipbackimg {
+			display: block !important;
+			margin-left: -50px;
+		}
+		/* Display Admin Panel Blocks */
+		.dnn-panel.dnnSortable {
+			border: 1px dashed #e3e3e3;
+			padding: 10px;
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		.dnn-panel.dnnSortable:hover {
+			border: 1px dashed #444444;
+		}
+		.dnn-panel.dnnSortable.DNNEmptyPane {
+			min-height: 15px !important;
+			padding: 6px 10px !important;
+			text-align: center;
+			background-color: #f5f5f5;
+			border-style: none;
+		}
+		.dnn-panel.dnnSortable.DNNEmptyPane:hover {
+			border: none;
+		}
+		.dnn-panel.dnnSortable.DNNEmptyPane:before {
+			font-size: 12px;
+			color: #a6a6a6;
+			line-height: 16px;
+		}
+		#dnn_Offcanvas.dnnSortable.DNNEmptyPane {
+			width: 100%;
+			min-height: 15px !important;
+			padding: 6px 10px !important;
+			text-align: center;
+			border-style: none;
+			background-color: #434343;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			font-size: 12px;
+			color: #808080;
+		}
+		/* @group Appends text to empty panels */
+			#dnn_Row1_12.dnnSortable.DNNEmptyPane:before {
+				content: "Row 1 - 12 Columns";
+			}
+			#dnn_Row2_12.dnnSortable.DNNEmptyPane:before {
+				content: "Row 2 - 12 Columns";
+			}
+			#dnn_ContentPane.dnnSortable.DNNEmptyPane:before {
+				content: "Content Pane";
+			}
+			#dnn_ContentSidebar.dnnSortable.DNNEmptyPane:before {
+				content: "Content Sidebar";
+			}
+			#dnn_Row4_4x.dnnSortable.DNNEmptyPane:before {
+				content: "Row 4 - 4 Columns";
+			}
+			#dnn_Row4_x8.dnnSortable.DNNEmptyPane:before {
+				content: "Row 4 - 8 Columns";
+			}
+			#dnn_Row5_6x.dnnSortable.DNNEmptyPane:before, #dnn_Row5_x6.dnnSortable.DNNEmptyPane:before {
+				content: "Row 5 - 6 Columns";
+			}
+			#dnn_Row6_4xx.dnnSortable.DNNEmptyPane:before, #dnn_Row6_x4x.dnnSortable.DNNEmptyPane:before, #dnn_Row6_xx4.dnnSortable.DNNEmptyPane:before {
+				content: "Row 6 - 4 Columns";
+			}
+			#dnn_Row7_3xxx.dnnSortable.DNNEmptyPane:before, #dnn_Row7_x3xx.dnnSortable.DNNEmptyPane:before, #dnn_Row7_xx3x.dnnSortable.DNNEmptyPane:before, #dnn_Row7_xxx3.dnnSortable.DNNEmptyPane:before {
+				content: "Row 7 - 3 Columns";
+			}
+			#dnn_Row8_12.dnnSortable.DNNEmptyPane:before {
+				content: "Row 8 - 12 Columns";
+			}
+			#dnn_Row9_12.dnnSortable.DNNEmptyPane:before {
+				content: "Row 9 - 12 Columns";
+			}
+			#dnn_Offcanvas.dnnSortable.DNNEmptyPane:before {
+				content: "Row 9 - 12 Columns";
+			}
+			
+			
+		/* @end */
+	
+	/* @end */
+	
 	/* Fixes the DNN modal close button */
 	#Body .ui-button.ui-widget.ui-dialog-titlebar-close {
 		width: 27px !important;
@@ -176,6 +283,9 @@ footer * {
 	}
 	div.jspPane {
 		width: 100% !important; 
+	}
+	div.jspPane li {
+		min-height: 32px !important;
 	}
 	ul.rcbList {
 		background-color: #ffffff;
