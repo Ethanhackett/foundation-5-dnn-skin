@@ -1,0 +1,19 @@
+  <section class="top-bar-section">
+    <ul class="left">
+      [*>NODE]
+    </ul>
+  </section>
+[>NODE]
+	<li class="[?NODE]has-dropdown [/?][?SELECTED]active[/?]">
+	[?ENABLED]
+		<a target="[=TARGET]" href="[=URL]" [?NODE] [/?]>[=TEXT] [?NODE][/?]</a>
+	[?ELSE]
+		<a href="#" [?NODE] [/?]>[=TEXT] [?NODE][/?]</a>
+	[/?]
+	[?NODE]
+	    <ul class="dropdown">
+	    [*>NODE]
+	    </ul>
+	[/?]
+	</li>
+[/>]

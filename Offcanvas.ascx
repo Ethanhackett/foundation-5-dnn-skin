@@ -70,7 +70,7 @@
 	          </section>
 	        </li>
 	      </ul>
-	      <dnn:MENU ID="foundationNav" MenuStyle="foundationNav" runat="server"></dnn:MENU>
+	      <dnn:MENU ID="foundationNavLeft" MenuStyle="foundationNavLeft" runat="server"></dnn:MENU>
 	    </nav>
 	  </div>
 	</div>

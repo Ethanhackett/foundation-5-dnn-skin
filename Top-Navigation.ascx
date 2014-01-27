@@ -36,7 +36,7 @@
 	        </li>
 	         <li class="toggle-topbar menu-icon"><a href="#"></a></li>
 	      </ul>
-	      <dnn:MENU ID="foundationNav" MenuStyle="foundationNav" runat="server"></dnn:MENU>
+	      <dnn:MENU ID="foundationNavRight" MenuStyle="foundationNavRight" runat="server"></dnn:MENU>
 	    </nav>
 	</div>
 	<%-- End Header Navigation --%>
