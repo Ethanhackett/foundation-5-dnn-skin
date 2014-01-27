@@ -166,10 +166,7 @@ footer * {
 /* @group DNN Admin CSS */
 
 	/* @group DNN Panel Styling */
-		form .dnn_mact li {
-			top: -51px;
-			right: -15px;
-		}
+	
 		.eipbackimg {
 			display: block !important;
 			margin-left: -50px;

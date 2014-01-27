@@ -27,6 +27,20 @@
 <%-- Start Header --%>
 <header>
 	
+	<%-- Start Header Navigation --%>
+	<div class="contain-to-grid sticky">
+	    <nav class="top-bar" data-topbar>
+	      <ul class="title-area">
+	        <li class="name">
+	          <h1><a href="#"><%=PortalSettings.PortalName%></a></h1>
+	        </li>
+	         <li class="toggle-topbar menu-icon"><a href="#"></a></li>
+	      </ul>
+	      <dnn:MENU ID="foundationNav" MenuStyle="foundationNav" runat="server"></dnn:MENU>
+	    </nav>
+	</div>
+	<%-- End Header Navigation --%>
+	
 	<%-- Start Row 1 --%>
 	<div class="row">
 	  <div class="large-12 columns">
@@ -52,26 +66,6 @@
 	<%-- End Header Content --%>
 	
 	<br/>
-	
-	<%-- Start Header Navigation --%>
-	<div class="row">
-	  <div class="large-12 columns">
-	    <nav class="top-bar" data-topbar>
-	      <ul class="title-area">
-	        <li class="name">
-	          <h1><a href="#"><%=PortalSettings.PortalName%></a></h1>
-	        </li>
-	        <li>
-	          <section class="right-small hide-for-medium-up">
-	            <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
-	          </section>
-	        </li>
-	      </ul>
-	      <dnn:MENU ID="foundationNav" MenuStyle="foundationNav" runat="server"></dnn:MENU>
-	    </nav>
-	  </div>
-	</div>
-	<%-- End Header Navigation --%>
 
 </header>
 <%-- End Header --%>

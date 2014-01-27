@@ -23,6 +23,26 @@
 <dnn:META ID="mobileScale" runat="server" Name="viewport" Content="width=device-width,initial-scale=1" />
 <dnn:LANGUAGE runat="server" id="LANGUAGE1"  showMenu="False" showLinks="True" />
 
+<div class="off-canvas-wrap">
+  <div class="inner-wrap">
+
+<%-- Start Header Navigation --%>
+<div class="contain-to-grid sticky">
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#"><%=PortalSettings.PortalName%></a></h1>
+        </li>
+        <li>
+          <section class="right-small hide-for-medium-up">
+            <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
+          </section>
+        </li>
+      </ul>
+      <dnn:MENU ID="foundationNav" MenuStyle="foundationNav" runat="server"></dnn:MENU>
+    </nav>
+</div>
+<%-- End Header Navigation --%>
 
 <%-- Start Header --%>
 <header>
@@ -52,26 +72,6 @@
 	<%-- End Header Content --%>
 	
 	<br/>
-	
-	<%-- Start Header Navigation --%>
-	<div class="row">
-	  <div class="large-12 columns">
-	    <nav class="top-bar" data-topbar>
-	      <ul class="title-area">
-	        <li class="name">
-	          <h1><a href="#"><%=PortalSettings.PortalName%></a></h1>
-	        </li>
-	        <li>
-	          <section class="right-small hide-for-medium-up">
-	            <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
-	          </section>
-	        </li>
-	      </ul>
-	      <dnn:MENU ID="foundationNav" MenuStyle="foundationNav" runat="server"></dnn:MENU>
-	    </nav>
-	  </div>
-	</div>
-	<%-- End Header Navigation --%>
 
 </header>
 <%-- End Header --%>
@@ -201,6 +201,25 @@
   </div>
 </footer>
 
+
+	<!-- Off Canvas Menu -->
+	<aside class="right-off-canvas-menu">
+	    <!-- whatever you want goes here -->
+	    <dnn:MENU ID="foundationOffcanvasNav" MenuStyle="foundationOffcanvasNav" runat="server"></dnn:MENU>
+	    <%-- Start Offcanvas --%>
+	    <div class="row">
+	      <div class="large-12 columns">
+	        <div id="Offcanvas" class="Offcanvas" runat="server"></div>
+	      </div>
+	    </div>
+	    <%-- End Offcanvas --%>
+	</aside>
+	
+	<!-- close the off-canvas menu -->
+	<a class="exit-off-canvas"></a>
+
+  </div>
+</div>
 
 <%-- Foundation Resources --%>
 <%-- Don't use the default DNN js include because it moves these to the head and causes conflict errors --%>

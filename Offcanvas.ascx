@@ -20,13 +20,6 @@
 <link rel="stylesheet" href="/Portals/_default/Skins/Foundation/foundation-icons/foundation-icons.css" media="screen" type="text/css" />
 <%-- Foundation Resources --%>
 
-<!--[if lt IE 9]>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
-  <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
-  <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
-<![endif]-->
-
 <dnn:META ID="mobileScale" runat="server" Name="viewport" Content="width=device-width,initial-scale=1" />
 <dnn:LANGUAGE runat="server" id="LANGUAGE1"  showMenu="False" showLinks="True" />
 
@@ -239,4 +232,6 @@
 	jQuery.noConflict();
 	jQuery(document).foundation();
 </script>
+<script src="/Portals/_default/Skins/Foundation/foundation/js/rem.min.js" type="text/javascript"></script>
+
 <%-- Foundation Resources --%>
